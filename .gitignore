@@ -1,0 +1,23 @@
+# Local WordPress configuration and secrets
+wp-config.php
+
+# WordPress generated content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+wp-content/backups/
+
+# Logs and local runtime files
+*.log
+.htaccess
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependency caches
+node_modules/
+vendor/
