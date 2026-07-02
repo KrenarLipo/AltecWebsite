@@ -1,0 +1,784 @@
+{
+  "form.brand": "nutriminds",
+  "form.title": "Specialist verification",
+  "form.intro": "Register your gut health credentials before joining the NutriMinds specialist community.",
+  "form.step": "Step",
+  "form.stepOf": "of",
+  "step.details": "Details",
+  "step.specialties": "Professions",
+  "step.documents": "Documents",
+  "step.review": "Review",
+  "details.title": "Your details",
+  "details.description": "We will verify your email before your specialist application enters the review queue.",
+  "details.firstName": "First name",
+  "details.lastName": "Last name",
+  "details.email": "Email address",
+  "details.phone": "Phone",
+  "details.registrationNumber": "Pro license number",
+  "specialties.title": "Choose your profession or specialist field",
+  "specialties.description": "Select one primary profession and any additional areas relevant to gut, brain, microbiome, nutrition, or adjacent clinical work.",
+  "specialties.searchLabel": "Search by profession, specialisation, keyword, or category",
+  "specialties.searchPlaceholder": "Nutritional psychiatry, microbiome, neurology, immunology...",
+  "documents.title": "Upload your documents",
+  "documents.description": "Used only to verify your specialist fields. Backend storage will be protected in the next phase.",
+  "documents.registration": "Professional license or registration",
+  "documents.credential": "Diploma, certificate, or field credential",
+  "documents.help": "PDF, JPG or PNG - max 10 MB",
+  "review.title": "Review & submit",
+  "review.description": "Check your information before sending it for verification.",
+  "review.terms": "I agree to the Terms & Conditions and Privacy Policy.",
+  "review.platformConsent": "I consent to my verified specialist profile being created on os.nutriminds.net.",
+  "review.prototypeNotice": "Frontend prototype complete. Backend submission will be connected in the next phase.",
+  "button.back": "Back",
+  "button.continue": "Continue",
+  "button.submit": "Submit application",
+  "js.selected": "Selected",
+  "js.select": "Select",
+  "js.primary": "Primary",
+  "js.primaryPrefix": "Primary",
+  "js.selectedTitle": "Selected",
+  "js.reviewTitle": "Application summary",
+  "js.registrationLabel": "Registration",
+  "js.noRegistrationDocument": "No registration document selected",
+  "js.noCredential": "No credential selected",
+  "js.frontendComplete": "Frontend complete",
+  "js.noResults": "No professions match your search.",
+  "js.submitting": "Sending application...",
+  "js.submitError": "Submission failed. Please check the form and try again.",
+  "validation.required": "This field is required.",
+  "validation.email": "Please enter a valid email address.",
+  "validation.phone": "Please enter a valid phone number.",
+  "validation.fileRequired": "Please upload this document.",
+  "validation.fileSize": "This file is larger than 10 MB.",
+  "validation.fileType": "Please upload a PDF, JPG, or PNG file.",
+  "validation.specialtiesRequired": "Please select at least one profession and choose a primary profession.",
+  "validation.termsRequired": "Please confirm this consent before submitting.",
+  "ajax.success": "Application received. It is waiting for admin review.",
+  "ajax.invalidRequest": "The submission could not be verified. Please refresh the page and try again.",
+  "ajax.requiredFields": "Please complete all required fields and select a primary profession.",
+  "ajax.phoneError": "Please enter a valid phone number.",
+  "ajax.storageError": "The application could not be stored. Please try again.",
+  "ajax.uploadError": "One of the documents could not be uploaded. Please use PDF, JPG, or PNG files up to 10 MB.",
+  "email.rejection.subject": "Update about your {site} specialist application",
+  "email.rejection.defaultName": "there",
+  "email.rejection.body": "Hello {name},\n\nThank you for your interest in joining {site} as a specialist.\n\nWe reviewed the documents you submitted, but we are not able to validate them yet. This does not necessarily mean your professional background is not suitable; it only means the current documents are not enough for our verification step.\n\nYou are welcome to review your documents and submit an updated application when you are ready.\n\nKind regards,\n{site}",
+  "specialtyGroups": [
+    {
+      "category": "Nutritional Psychiatry",
+      "description": "Core discipline — diet, mood & mental illness",
+      "items": [
+        {
+          "id": "nutritional-psychiatrist",
+          "name": "Nutritional Psychiatrist",
+          "description": "MD/PhD – prescribes dietary interventions alongside pharmacotherapy for psychiatric conditions",
+          "tags": [
+            "core field",
+            "clinical",
+            "research"
+          ]
+        },
+        {
+          "id": "clinical-nutritional-psychologist",
+          "name": "Clinical Nutritional Psychologist",
+          "description": "PhD – studies the bidirectional relationship between food intake patterns and psychological outcomes",
+          "tags": [
+            "clinical",
+            "research"
+          ]
+        },
+        {
+          "id": "research-fellow-nutritional-psychiatry",
+          "name": "Research Fellow – Nutritional Psychiatry",
+          "description": "Postdoc or senior researcher in dedicated nutritional psychiatry labs (e.g. Food & Mood Centre)",
+          "tags": [
+            "research",
+            "academia"
+          ]
+        },
+        {
+          "id": "dietary-intervention-trialist",
+          "name": "Dietary Intervention Trialist",
+          "description": "Designs and runs RCTs (e.g. SMILES-type trials) examining diet-as-medicine in depression/anxiety",
+          "tags": [
+            "research",
+            "trials"
+          ]
+        },
+        {
+          "id": "psychodietary-counsellor",
+          "name": "Psychodietary Counsellor",
+          "description": "Advanced-practice clinician integrating psychiatric assessment with personalised dietary therapy",
+          "tags": [
+            "clinical"
+          ]
+        },
+        {
+          "id": "nutripsychiatric-nurse-practitioner",
+          "name": "Nutripsychiatric Nurse Practitioner",
+          "description": "APN with specialist training in nutrition-based mental health protocols",
+          "tags": [
+            "clinical",
+            "nursing"
+          ]
+        },
+        {
+          "id": "eating-behaviour-scientist",
+          "name": "Eating Behaviour Scientist",
+          "description": "Investigates psychological drivers of food choice and their downstream effect on mood and cognition",
+          "tags": [
+            "research",
+            "psychology"
+          ]
+        },
+        {
+          "id": "food-mood-researcher-msc-phd",
+          "name": "Food-Mood Researcher (MSc/PhD)",
+          "description": "Early-career academic focusing on observational or mechanistic nutritional psychiatry studies",
+          "tags": [
+            "research",
+            "academia"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Gut–Brain Axis & Microbiome Science",
+      "description": "Microbiota–gut–brain signalling, psychobiotics",
+      "items": [
+        {
+          "id": "psychobiotic-researcher",
+          "name": "Psychobiotic Researcher",
+          "description": "Studies pro- and prebiotic effects on neurotransmitter production, HPA axis and mood",
+          "tags": [
+            "research",
+            "microbiome"
+          ]
+        },
+        {
+          "id": "enteric-neuroscientist",
+          "name": "Enteric Neuroscientist",
+          "description": "Specialist in the enteric nervous system and its crosstalk with the CNS",
+          "tags": [
+            "research",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "clinical-microbiome-specialist",
+          "name": "Clinical Microbiome Specialist",
+          "description": "MD or PhD integrating microbiome diagnostics into patient management",
+          "tags": [
+            "clinical",
+            "microbiome"
+          ]
+        },
+        {
+          "id": "gut-brain-axis-researcher",
+          "name": "Gut–Brain Axis Researcher",
+          "description": "Investigates vagal, immune and metabolic pathways linking gut microbiota to brain function",
+          "tags": [
+            "research",
+            "microbiome",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "microbiome-data-scientist-bioinformatician",
+          "name": "Microbiome Data Scientist / Bioinformatician",
+          "description": "Analyses 16S rRNA, metagenomics and metabolomics datasets from gut–brain studies",
+          "tags": [
+            "research",
+            "data science"
+          ]
+        },
+        {
+          "id": "gnotobiotic-animal-model-researcher",
+          "name": "Gnotobiotic Animal Model Researcher",
+          "description": "Uses germ-free rodent models to study microbiota–behaviour relationships",
+          "tags": [
+            "research",
+            "preclinical"
+          ]
+        },
+        {
+          "id": "metabolomics-specialist-gut-metabolites",
+          "name": "Metabolomics Specialist (gut metabolites)",
+          "description": "Profiles short-chain fatty acids, tryptophan metabolites, GABA precursors in biosamples",
+          "tags": [
+            "research",
+            "metabolomics"
+          ]
+        },
+        {
+          "id": "psychobiome-clinician-researcher",
+          "name": "Psychobiome Clinician-Researcher",
+          "description": "Translational clinician bridging microbiome lab findings into psychiatric care",
+          "tags": [
+            "clinical",
+            "research",
+            "microbiome"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Neurology & Clinical Neuroscience",
+      "description": "Neurological manifestations of gut–brain dysfunction",
+      "items": [
+        {
+          "id": "behavioural-neurologist",
+          "name": "Behavioural Neurologist",
+          "description": "Treats neurological disorders with prominent behavioural/cognitive components linked to systemic inflammation or diet",
+          "tags": [
+            "clinical",
+            "neurology"
+          ]
+        },
+        {
+          "id": "neuropsychiatrist",
+          "name": "Neuropsychiatrist",
+          "description": "Bridges neurology and psychiatry; evaluates gut–brain interactions in conditions like MS, Parkinson's, epilepsy",
+          "tags": [
+            "clinical",
+            "neurology",
+            "psychiatry"
+          ]
+        },
+        {
+          "id": "neurogastroenterologist",
+          "name": "Neurogastroenterologist",
+          "description": "MD specialising in the interface of GI and neurological systems (IBS, functional GI disorders, enteric neuropathies)",
+          "tags": [
+            "clinical",
+            "gastroenterology",
+            "neurology"
+          ]
+        },
+        {
+          "id": "cognitive-neuroscientist",
+          "name": "Cognitive Neuroscientist",
+          "description": "Studies diet- and microbiome-related effects on cognition, memory and neurodegeneration",
+          "tags": [
+            "research",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "clinical-neuropsychologist",
+          "name": "Clinical Neuropsychologist",
+          "description": "Assesses and rehabilitates cognitive dysfunction; interested in nutritional and gut-related contributing factors",
+          "tags": [
+            "clinical",
+            "psychology"
+          ]
+        },
+        {
+          "id": "neurodegenerative-disease-researcher",
+          "name": "Neurodegenerative Disease Researcher",
+          "description": "Investigates gut–brain links in Alzheimer's, Parkinson's and ALS",
+          "tags": [
+            "research",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "neuroinflammation-researcher",
+          "name": "Neuroinflammation Researcher",
+          "description": "Studies how gut-derived cytokines, LPS and SCFAs modulate CNS inflammatory states",
+          "tags": [
+            "research",
+            "immunology",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "paediatric-neurologist",
+          "name": "Paediatric Neurologist",
+          "description": "Examines nutrition and microbiome influences on neurodevelopmental conditions (ADHD, ASD, epilepsy)",
+          "tags": [
+            "clinical",
+            "paediatric",
+            "neurology"
+          ]
+        },
+        {
+          "id": "functional-neurologist",
+          "name": "Functional Neurologist",
+          "description": "Integrative/functional medicine approach to neurological symptoms including dietary and microbiome factors",
+          "tags": [
+            "clinical",
+            "functional medicine"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Immunology & Neuroimmunology",
+      "description": "Immune–brain–gut crosstalk, neuroinflammation",
+      "items": [
+        {
+          "id": "neuroimmunologist",
+          "name": "Neuroimmunologist",
+          "description": "Studies CNS–immune system interactions; interested in gut-derived immune signals affecting brain",
+          "tags": [
+            "research",
+            "immunology",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "clinical-immunologist",
+          "name": "Clinical Immunologist",
+          "description": "MD treating immune dysregulation (autoimmunity, food-triggered immune activation) with CNS implications",
+          "tags": [
+            "clinical",
+            "immunology"
+          ]
+        },
+        {
+          "id": "mucosal-immunologist",
+          "name": "Mucosal Immunologist",
+          "description": "Specialist in gut-associated lymphoid tissue (GALT) and IgA/IgG responses at the gut barrier",
+          "tags": [
+            "research",
+            "immunology"
+          ]
+        },
+        {
+          "id": "psychoneuroimmunologist",
+          "name": "Psychoneuroimmunologist",
+          "description": "Studies bidirectional pathways between psychological states, nervous system and immune function",
+          "tags": [
+            "research",
+            "immunology",
+            "psychology"
+          ]
+        },
+        {
+          "id": "inflammasome-researcher",
+          "name": "Inflammasome Researcher",
+          "description": "Investigates NLRP3 and other inflammasome pathways activated by diet-derived signals in psychiatric disease",
+          "tags": [
+            "research",
+            "immunology"
+          ]
+        },
+        {
+          "id": "cytokine-and-mood-disorder-researcher",
+          "name": "Cytokine & Mood Disorder Researcher",
+          "description": "Links pro-inflammatory cytokines (IL-6, TNF-α, CRP) to depression, fatigue and cognitive symptoms",
+          "tags": [
+            "research",
+            "immunology",
+            "psychiatry"
+          ]
+        },
+        {
+          "id": "food-immunologist-food-allergy-researcher",
+          "name": "Food Immunologist / Food Allergy Researcher",
+          "description": "Studies immune reactions to food antigens and their systemic effects including neuropsychiatric symptoms",
+          "tags": [
+            "research",
+            "immunology",
+            "nutrition"
+          ]
+        },
+        {
+          "id": "autoimmune-encephalitis-specialist",
+          "name": "Autoimmune Encephalitis Specialist",
+          "description": "Clinician-researcher examining gut–immune–brain pathways in autoimmune CNS conditions",
+          "tags": [
+            "clinical",
+            "immunology",
+            "neurology"
+          ]
+        },
+        {
+          "id": "microbiome-immunologist",
+          "name": "Microbiome Immunologist",
+          "description": "Focuses on how microbial diversity and dysbiosis modulate innate and adaptive immunity",
+          "tags": [
+            "research",
+            "microbiome",
+            "immunology"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Endocrinology & Metabolic Science",
+      "description": "HPA axis, hormones, metabolic–mental health links",
+      "items": [
+        {
+          "id": "psychoneuroendocrinologist",
+          "name": "Psychoneuroendocrinologist",
+          "description": "Studies hormonal regulation of mood, stress and behaviour; HPA axis, cortisol, oxytocin",
+          "tags": [
+            "research",
+            "endocrinology",
+            "psychology"
+          ]
+        },
+        {
+          "id": "neuroendocrinologist",
+          "name": "Neuroendocrinologist",
+          "description": "Investigates how hypothalamic–pituitary hormonal axes interface with gut-derived signals",
+          "tags": [
+            "research",
+            "endocrinology",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "metabolic-psychiatrist",
+          "name": "Metabolic Psychiatrist",
+          "description": "Addresses metabolic syndrome, insulin resistance and adipokines as risk factors in psychiatric disorders",
+          "tags": [
+            "clinical",
+            "endocrinology",
+            "psychiatry"
+          ]
+        },
+        {
+          "id": "clinical-endocrinologist",
+          "name": "Clinical Endocrinologist",
+          "description": "MD treating thyroid, adrenal and metabolic disorders with mental health manifestations",
+          "tags": [
+            "clinical",
+            "endocrinology"
+          ]
+        },
+        {
+          "id": "gut-hormone-researcher",
+          "name": "Gut Hormone Researcher",
+          "description": "Studies GLP-1, PYY, ghrelin, CCK and other enteroendocrine signals affecting appetite, mood and cognition",
+          "tags": [
+            "research",
+            "endocrinology",
+            "gastroenterology"
+          ]
+        },
+        {
+          "id": "stress-biology-researcher",
+          "name": "Stress Biology Researcher",
+          "description": "Examines cortisol, allostatic load and HPA reactivity in relation to gut permeability and mental health",
+          "tags": [
+            "research",
+            "endocrinology"
+          ]
+        },
+        {
+          "id": "chrono-nutritionist-circadian-biologist",
+          "name": "Chrono-nutritionist / Circadian Biologist",
+          "description": "Studies time-of-eating, circadian gene expression and their effects on mood, metabolism and microbiome",
+          "tags": [
+            "research",
+            "nutrition",
+            "endocrinology"
+          ]
+        },
+        {
+          "id": "insulin-resistance-and-brain-health-researcher",
+          "name": "Insulin Resistance & Brain Health Researcher",
+          "description": "Links type-2 diabetes pathways, brain insulin signalling and dementia/depression risk",
+          "tags": [
+            "research",
+            "endocrinology",
+            "neuroscience"
+          ]
+        },
+        {
+          "id": "adipokine-and-neuroinflammation-researcher",
+          "name": "Adipokine & Neuroinflammation Researcher",
+          "description": "Studies leptin, adiponectin and obesity-driven inflammation in psychiatric disease",
+          "tags": [
+            "research",
+            "endocrinology",
+            "immunology"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Medical Psychology & Psychosomatic Medicine",
+      "description": "Biopsychosocial mechanisms, somatisation, stress",
+      "items": [
+        {
+          "id": "medical-psychologist",
+          "name": "Medical Psychologist",
+          "description": "PhD/MD-PhD applying psychological models within medical settings; focuses on chronic disease, pain and gut symptoms",
+          "tags": [
+            "clinical",
+            "psychology"
+          ]
+        },
+        {
+          "id": "psychosomatic-physician",
+          "name": "Psychosomatic Physician",
+          "description": "MD integrating somatic and psychological diagnosis; frequently encounters functional GI disorders",
+          "tags": [
+            "clinical",
+            "psychiatry",
+            "gastroenterology"
+          ]
+        },
+        {
+          "id": "health-psychologist-chronic-disease",
+          "name": "Health Psychologist (chronic disease)",
+          "description": "Studies behavioural, cognitive and emotional factors in IBD, IBS, food intolerances and immune disorders",
+          "tags": [
+            "clinical",
+            "research",
+            "psychology"
+          ]
+        },
+        {
+          "id": "somatic-symptom-disorder-specialist",
+          "name": "Somatic Symptom Disorder Specialist",
+          "description": "Clinician-researcher focusing on medically unexplained symptoms with gut–brain underpinnings",
+          "tags": [
+            "clinical",
+            "psychiatry"
+          ]
+        },
+        {
+          "id": "biofeedback-and-neurofeedback-clinician",
+          "name": "Biofeedback & Neurofeedback Clinician",
+          "description": "Uses autonomic and brainwave feedback to modulate stress, gut motility and emotional regulation",
+          "tags": [
+            "clinical",
+            "psychology"
+          ]
+        },
+        {
+          "id": "stress-and-resilience-researcher",
+          "name": "Stress & Resilience Researcher",
+          "description": "Examines psychological resilience, adverse childhood experiences and their gut-microbiome signatures",
+          "tags": [
+            "research",
+            "psychology"
+          ]
+        },
+        {
+          "id": "interoception-researcher",
+          "name": "Interoception Researcher",
+          "description": "Studies gut-to-brain interceptive signalling and its role in emotional awareness and mental health",
+          "tags": [
+            "research",
+            "neuroscience",
+            "psychology"
+          ]
+        },
+        {
+          "id": "pain-psychologist",
+          "name": "Pain Psychologist",
+          "description": "Addresses visceral hypersensitivity, central sensitisation and chronic pain with gut–brain perspectives",
+          "tags": [
+            "clinical",
+            "psychology"
+          ]
+        },
+        {
+          "id": "mind-body-medicine-researcher",
+          "name": "Mind–Body Medicine Researcher",
+          "description": "Investigates meditation, relaxation and lifestyle interventions on gut function and psychiatric endpoints",
+          "tags": [
+            "research",
+            "psychology"
+          ]
+        },
+        {
+          "id": "liaison-psychiatrist",
+          "name": "Liaison Psychiatrist",
+          "description": "Works at the interface of physical and mental illness in hospital settings; frequently addresses GI comorbidities",
+          "tags": [
+            "clinical",
+            "psychiatry"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Translational & Precision Research",
+      "description": "From bench to bedside — omics, biomarkers, clinical trials",
+      "items": [
+        {
+          "id": "translational-neuroscientist",
+          "name": "Translational Neuroscientist",
+          "description": "Bridges preclinical gut–brain findings to clinical application and trial design",
+          "tags": [
+            "research",
+            "translational"
+          ]
+        },
+        {
+          "id": "precision-nutrition-researcher",
+          "name": "Precision Nutrition Researcher",
+          "description": "Uses genomics, microbiomics and metabolomics to personalise dietary recommendations",
+          "tags": [
+            "research",
+            "nutrition",
+            "data science"
+          ]
+        },
+        {
+          "id": "biomarker-discovery-scientist",
+          "name": "Biomarker Discovery Scientist",
+          "description": "Identifies blood, stool or CSF biomarkers linking nutritional status to psychiatric phenotypes",
+          "tags": [
+            "research",
+            "translational"
+          ]
+        },
+        {
+          "id": "clinical-trial-designer-psychiatric-nutrition",
+          "name": "Clinical Trial Designer (psychiatric nutrition)",
+          "description": "Specialist in RCT methodology for dietary and probiotic interventions in mental health populations",
+          "tags": [
+            "research",
+            "trials",
+            "methodology"
+          ]
+        },
+        {
+          "id": "epigenetics-researcher-diet-and-brain",
+          "name": "Epigenetics Researcher (diet & brain)",
+          "description": "Studies how diet-induced epigenetic changes (DNA methylation, histone modification) affect psychiatric risk",
+          "tags": [
+            "research",
+            "genetics"
+          ]
+        },
+        {
+          "id": "multi-omics-data-integrator",
+          "name": "Multi-omics Data Integrator",
+          "description": "Combines transcriptomics, proteomics, metabolomics and microbiomics for gut–brain phenotyping",
+          "tags": [
+            "research",
+            "data science",
+            "omics"
+          ]
+        },
+        {
+          "id": "pharmacomicrobiomics-researcher",
+          "name": "Pharmacomicrobiomics Researcher",
+          "description": "Investigates how gut microbiota modulates drug metabolism, efficacy and psychiatric side-effects",
+          "tags": [
+            "research",
+            "pharmacology",
+            "microbiome"
+          ]
+        },
+        {
+          "id": "systems-biology-scientist",
+          "name": "Systems Biology Scientist",
+          "description": "Models complex gut–brain–immune networks using computational approaches",
+          "tags": [
+            "research",
+            "data science",
+            "systems biology"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Key Research Roles & Academic Titles",
+      "description": "Recognised positions, degrees and affiliations",
+      "items": [
+        {
+          "id": "professor-of-nutritional-psychiatry-neuroscience",
+          "name": "Professor of Nutritional Psychiatry / Neuroscience",
+          "description": "Chair-level academic leading research groups in the field",
+          "tags": [
+            "academia",
+            "title"
+          ]
+        },
+        {
+          "id": "associate-assistant-professor",
+          "name": "Associate / Assistant Professor",
+          "description": "Early–mid career faculty in nutritional psychiatry, neuroscience or related disciplines",
+          "tags": [
+            "academia",
+            "title"
+          ]
+        },
+        {
+          "id": "principal-investigator-pi",
+          "name": "Principal Investigator (PI)",
+          "description": "Grant-holding researcher running independent lab or clinical research unit",
+          "tags": [
+            "academia",
+            "research",
+            "title"
+          ]
+        },
+        {
+          "id": "postdoctoral-research-fellow",
+          "name": "Postdoctoral Research Fellow",
+          "description": "Post-PhD researcher with specialisation in gut–brain, nutrition–mood or neuroimmunology",
+          "tags": [
+            "academia",
+            "research"
+          ]
+        },
+        {
+          "id": "md-phd-clinician-scientist",
+          "name": "MD-PhD Clinician-Scientist",
+          "description": "Dual-trained physician-researcher at the translational interface of psychiatry and nutritional science",
+          "tags": [
+            "clinical",
+            "research",
+            "title"
+          ]
+        },
+        {
+          "id": "ecnp-cinp-member-neuropsychopharmacology",
+          "name": "ECNP / CINP Member (Neuropsychopharmacology)",
+          "description": "Member of European/International Collegium of Neuropsychopharmacology with nutrition focus",
+          "tags": [
+            "affiliation",
+            "title"
+          ]
+        },
+        {
+          "id": "isad-member-int-l-society-for-affective-disorders",
+          "name": "ISAD Member (Int'l Society for Affective Disorders)",
+          "description": "Researcher or clinician with interest in nutritional and biological factors in mood disorders",
+          "tags": [
+            "affiliation",
+            "title"
+          ]
+        },
+        {
+          "id": "ismb-isme-member-microbiome-research",
+          "name": "ISMB / ISME Member (Microbiome Research)",
+          "description": "Affiliated with international microbiome research societies",
+          "tags": [
+            "affiliation",
+            "microbiome"
+          ]
+        },
+        {
+          "id": "fellow-of-the-royal-college-of-psychiatrists-frcpsych",
+          "name": "Fellow of the Royal College of Psychiatrists (FRCPsych)",
+          "description": "Senior clinical-academic psychiatrist in the UK/Commonwealth system",
+          "tags": [
+            "title",
+            "clinical",
+            "psychiatry"
+          ]
+        },
+        {
+          "id": "fasn-fsni-neuroscience-institute-fellow",
+          "name": "FASN / FSNI (Neuroscience Institute Fellow)",
+          "description": "Fellow of national or international neuroscience institutes",
+          "tags": [
+            "title",
+            "neuroscience"
+          ]
+        }
+      ]
+    }
+  ]
+}

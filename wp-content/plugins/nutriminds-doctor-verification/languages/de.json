@@ -1,0 +1,1039 @@
+{
+  "form.brand": "nutriminds",
+  "form.title": "Verifizierung für Spezialisten",
+  "form.intro": "Registrieren Sie Ihre Gut-Health-Nachweise, bevor Sie der NutriMinds-Fachcommunity beitreten.",
+  "form.step": "Schritt",
+  "form.stepOf": "von",
+  "step.details": "Angaben",
+  "step.specialties": "Berufe",
+  "step.documents": "Dokumente",
+  "step.review": "Prüfung",
+  "details.title": "Ihre Angaben",
+  "details.description": "Wir bestätigen Ihre E-Mail-Adresse, bevor Ihre Spezialistenbewerbung in die Prüfung geht.",
+  "details.firstName": "Vorname",
+  "details.lastName": "Nachname",
+  "details.email": "E-Mail-Adresse",
+  "details.phone": "Telefon",
+  "details.registrationNumber": "Pro-Lizenznummer",
+  "specialties.title": "Wählen Sie Ihren Beruf oder Ihr Fachgebiet",
+  "specialties.description": "Wählen Sie einen primären Beruf und weitere relevante Fachbereiche für Darmgesundheit, Ernährung, Medizin, Therapie oder Forschung.",
+  "specialties.searchLabel": "Nach Beruf, Fachgebiet, Stichwort oder Kategorie suchen",
+  "specialties.searchPlaceholder": "Gastroenterologie, Ernährung, Psychologie, Mikrobiom...",
+  "documents.title": "Dokumente hochladen",
+  "documents.description": "Nur zur Verifizierung Ihrer Fachfelder. Die geschützte Speicherung folgt in der Backend-Phase.",
+  "documents.registration": "Berufliche Lizenz oder Registrierung",
+  "documents.credential": "Diplom, Zertifikat oder Fachnachweis",
+  "documents.help": "PDF, JPG oder PNG - max. 10 MB",
+  "review.title": "Prüfen & absenden",
+  "review.description": "Prüfen Sie Ihre Angaben, bevor Sie sie zur Verifizierung senden.",
+  "review.terms": "Ich stimme den AGB und der Datenschutzerklärung zu.",
+  "review.platformConsent": "Ich willige ein, dass mein verifiziertes Spezialistenprofil auf os.nutriminds.net erstellt wird.",
+  "review.prototypeNotice": "Frontend-Prototyp abgeschlossen. Die Backend-Übermittlung wird in der nächsten Phase verbunden.",
+  "button.back": "Zurück",
+  "button.continue": "Weiter",
+  "button.submit": "Bewerbung absenden",
+  "js.selected": "Ausgewählt",
+  "js.select": "Auswählen",
+  "js.primary": "Primär",
+  "js.primaryPrefix": "Primär",
+  "js.selectedTitle": "Ausgewählt",
+  "js.reviewTitle": "Zusammenfassung der Bewerbung",
+  "js.registrationLabel": "Registrierung",
+  "js.noRegistrationDocument": "Kein Registrierungsdokument ausgewählt",
+  "js.noCredential": "Kein Nachweis ausgewählt",
+  "js.frontendComplete": "Frontend abgeschlossen",
+  "js.noResults": "Keine Berufe passen zu Ihrer Suche.",
+  "js.submitting": "Bewerbung wird gesendet...",
+  "js.submitError": "Die Übermittlung ist fehlgeschlagen. Bitte prüfen Sie das Formular und versuchen Sie es erneut.",
+  "validation.required": "Dieses Feld ist erforderlich.",
+  "validation.email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "validation.phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+  "validation.fileRequired": "Bitte laden Sie dieses Dokument hoch.",
+  "validation.fileSize": "Diese Datei ist größer als 10 MB.",
+  "validation.fileType": "Bitte laden Sie eine PDF-, JPG- oder PNG-Datei hoch.",
+  "validation.specialtiesRequired": "Bitte wählen Sie mindestens einen Beruf und einen primären Beruf aus.",
+  "validation.termsRequired": "Bitte bestätigen Sie diese Einwilligung vor dem Absenden.",
+  "ajax.success": "Bewerbung erhalten. Sie wartet jetzt auf die Prüfung durch den Admin.",
+  "ajax.invalidRequest": "Die Übermittlung konnte nicht verifiziert werden. Bitte laden Sie die Seite neu und versuchen Sie es erneut.",
+  "ajax.requiredFields": "Bitte füllen Sie alle Pflichtfelder aus und wählen Sie einen primären Beruf.",
+  "ajax.phoneError": "Bitte geben Sie eine gültige Telefonnummer ein.",
+  "ajax.storageError": "Die Bewerbung konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+  "ajax.uploadError": "Eines der Dokumente konnte nicht hochgeladen werden. Bitte verwenden Sie PDF-, JPG- oder PNG-Dateien bis 10 MB.",
+  "email.rejection.subject": "Aktualisierung zu Ihrer {site}-Spezialistenbewerbung",
+  "email.rejection.defaultName": "Guten Tag",
+  "email.rejection.body": "Hallo {name},\n\nvielen Dank für Ihr Interesse, {site} als Spezialist:in beizutreten.\n\nWir haben die eingereichten Dokumente geprüft, können sie aktuell jedoch noch nicht validieren. Das bedeutet nicht zwingend, dass Ihr beruflicher Hintergrund ungeeignet ist; es bedeutet nur, dass die aktuellen Dokumente für unseren Verifizierungsschritt noch nicht ausreichen.\n\nSie können Ihre Unterlagen gern prüfen und eine aktualisierte Bewerbung einreichen, sobald Sie bereit sind.\n\nFreundliche Grüße\n{site}",
+  "specialtyGroups": [
+    {
+      "category": "Medizin – Gastroenterologie & Innere",
+      "description": "",
+      "items": [
+        {
+          "id": "gastroenterolog-in",
+          "name": "Gastroenterolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "internist-in",
+          "name": "Internist:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "hepatolog-in",
+          "name": "Hepatolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "proktolog-in",
+          "name": "Proktolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "viszeralchirurg-in",
+          "name": "Viszeralchirurg:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "allgemeinmediziner-in-hausarzt-hausarztin",
+          "name": "Allgemeinmediziner:in (Hausarzt/Hausärztin)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "notfallmediziner-in",
+          "name": "Notfallmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ernahrungsmediziner-in-daem",
+          "name": "Ernährungsmediziner:in (DAEM)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "naturheilkunde-mediziner-in",
+          "name": "Naturheilkunde-Mediziner:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Onkologie",
+      "description": "",
+      "items": [
+        {
+          "id": "internistische-r-onkolog-in",
+          "name": "Internistische:r Onkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "hamatoonkolog-in",
+          "name": "Hämatoonkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "strahlentherapeut-in-radioonkolog-in",
+          "name": "Strahlentherapeut:in / Radioonkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "gastrointestinale-onkolog-in",
+          "name": "Gastrointestinale Onkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "gynakologische-onkolog-in",
+          "name": "Gynäkologische Onkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "padiatrische-onkolog-in",
+          "name": "Pädiatrische Onkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "palliativmediziner-in",
+          "name": "Palliativmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "onkologische-pflegefachkraft-opf",
+          "name": "Onkologische Pflegefachkraft (OPF)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "psychoonkolog-in",
+          "name": "Psychoonkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ernahrungsberater-in-onkologie",
+          "name": "Ernährungsberater:in (Onkologie)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Parasitologie & Infektiologie",
+      "description": "",
+      "items": [
+        {
+          "id": "parasitolog-in",
+          "name": "Parasitolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "infektiologe-infektiologin",
+          "name": "Infektiologe/Infektiologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "tropenmediziner-in",
+          "name": "Tropenmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "reisemediziner-in",
+          "name": "Reisemediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "mikrobiolog-in-klinisch",
+          "name": "Mikrobiolog:in (klinisch)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "hygieniker-in-krankenhaushygieniker-in",
+          "name": "Hygieniker:in / Krankenhaushygieniker:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "virologe-virologin",
+          "name": "Virologe/Virologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "bakteriolog-in",
+          "name": "Bakteriolog:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Urologie & Nephrologie",
+      "description": "",
+      "items": [
+        {
+          "id": "urolog-in",
+          "name": "Urolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "nephrolog-in",
+          "name": "Nephrolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "androlog-in",
+          "name": "Androlog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "uro-gynakolog-in",
+          "name": "Uro-Gynäkolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "padiatrische-r-urolog-in",
+          "name": "Pädiatrische:r Urolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kontinenzberater-in",
+          "name": "Kontinenzberater:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "beckenbodentherapeut-in",
+          "name": "Beckenbodentherapeut:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Psychiatrie & Neurologie",
+      "description": "",
+      "items": [
+        {
+          "id": "psychiater-in",
+          "name": "Psychiater:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "neurologe-neurologin",
+          "name": "Neurologe/Neurologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinder-and-jugendpsychiater-in",
+          "name": "Kinder- & Jugendpsychiater:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "psychosomatiker-in",
+          "name": "Psychosomatiker:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "schlafmediziner-in",
+          "name": "Schlafmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "suchtmediziner-in",
+          "name": "Suchtmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "schmerzspezialist-in-algesiolog-in",
+          "name": "Schmerzspezialist:in (Algesiolog:in)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Psychologie & Psychotherapie",
+      "description": "",
+      "items": [
+        {
+          "id": "psychologische-r-psychotherapeut-in",
+          "name": "Psychologische:r Psychotherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "verhaltenstherapeut-in",
+          "name": "Verhaltenstherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "tiefenpsychologisch-orientierte-r-therapeut-in",
+          "name": "Tiefenpsychologisch orientierte:r Therapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "klinische-r-psycholog-in",
+          "name": "Klinische:r Psycholog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "gesundheitspsycholog-in",
+          "name": "Gesundheitspsycholog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "neuropsycholog-in",
+          "name": "Neuropsycholog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinder-and-jugendlichenpsychotherapeut-in",
+          "name": "Kinder- & Jugendlichenpsychotherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "traumatolog-in-traumatherapeutin",
+          "name": "Traumatolog:in / Traumatherapeutin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "sportpsycholog-in",
+          "name": "Sportpsycholog:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Ernährung & Diätetik",
+      "description": "",
+      "items": [
+        {
+          "id": "ernahrungsberater-in-vdd-vdoe-quetheb",
+          "name": "Ernährungsberater:in (VDD, VDOE, QUETHEB)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "diatassistent-in-da",
+          "name": "Diätassistent:in (DA)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "okotrophologe-okotrophologin",
+          "name": "Ökotrophologe/Ökotrophologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ernahrungswissenschaftler-in",
+          "name": "Ernährungswissenschaftler:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "praventionsberater-in-ernahrung",
+          "name": "Präventionsberater:in (Ernährung)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "laktationsberaterin-stillberatung",
+          "name": "Laktationsberaterin / Stillberatung",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "padiatrische-ernahrungsberatung",
+          "name": "Pädiatrische Ernährungsberatung",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Naturheilkunde & Komplementärmedizin",
+      "description": "",
+      "items": [
+        {
+          "id": "heilpraktiker-in",
+          "name": "Heilpraktiker:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "heilpraktiker-in-psychotherapie",
+          "name": "Heilpraktiker:in (Psychotherapie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "homoopath-in",
+          "name": "Homöopath:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "phytotherapeut-in",
+          "name": "Phytotherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ayurveda-therapeut-in",
+          "name": "Ayurveda-Therapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "tcm-therapeut-in-akupunkteur-in",
+          "name": "TCM-Therapeut:in / Akupunkteur:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "naturheilkundler-in-arztlich",
+          "name": "Naturheilkundler:in (ärztlich)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "osteopath-in-eingetragen",
+          "name": "Osteopath:in (eingetragen)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Physiotherapie & Körpertherapie",
+      "description": "",
+      "items": [
+        {
+          "id": "physiotherapeut-in",
+          "name": "Physiotherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "osteopath-in",
+          "name": "Osteopath:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "manualtherapeutin-chiropraktiker-in",
+          "name": "Manualtherapeutin / Chiropraktiker:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "viszerale-osteopath-in",
+          "name": "Viszerale Osteopath:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "sportphysiotherapeut-in",
+          "name": "Sportphysiotherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "atemtherapeut-in",
+          "name": "Atemtherapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "masseur-in-med-bademeister-in",
+          "name": "Masseur:in / med. Bademeister:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Pflege & Therapieberufe",
+      "description": "",
+      "items": [
+        {
+          "id": "gesundheits-and-krankenpfleger-in",
+          "name": "Gesundheits- & Krankenpfleger:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "pflegefachkraft-generalistische-ausbildung",
+          "name": "Pflegefachkraft (generalistische Ausbildung)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "stomatherapeutin-stomaberatung",
+          "name": "Stomatherapeutin / Stomaberatung",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinderkrankenpfleger-in",
+          "name": "Kinderkrankenpfleger:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "advanced-practice-nurse-apn",
+          "name": "Advanced Practice Nurse (APN)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "medizinische-fachangestellte-mfa",
+          "name": "Medizinische Fachangestellte (MFA)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "physician-assistant-pa",
+          "name": "Physician Assistant (PA)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Pädiatrie & Entwicklung",
+      "description": "",
+      "items": [
+        {
+          "id": "kinderarzt-arztin-padiatrie",
+          "name": "Kinderarzt/-ärztin (Pädiatrie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "neonatologe-neonatologin",
+          "name": "Neonatologe/Neonatologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinder-gastroenterolog-in",
+          "name": "Kinder-Gastroenterolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinder-allergolog-in",
+          "name": "Kinder-Allergolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "kinder-ernahrungsberater-in",
+          "name": "Kinder-Ernährungsberater:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "hebamme",
+          "name": "Hebamme",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "stillberaterin-ibclc",
+          "name": "Stillberaterin (IBCLC)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Gynäkologie & Frauengesundheit",
+      "description": "",
+      "items": [
+        {
+          "id": "gynakologe-gynakologin",
+          "name": "Gynäkologe/Gynäkologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "hebamme-2",
+          "name": "Hebamme",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "stillberaterin-ibclc-2",
+          "name": "Stillberaterin (IBCLC)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "endokrinologe-endokrinologin-gynakologisch",
+          "name": "Endokrinologe/Endokrinologin (gynäkologisch)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "reproduktionsmediziner-in",
+          "name": "Reproduktionsmediziner:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Dermatologie & Allergologie",
+      "description": "",
+      "items": [
+        {
+          "id": "dermatolog-in",
+          "name": "Dermatolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "allergologe-allergologin",
+          "name": "Allergologe/Allergologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "umweltmediziner-in",
+          "name": "Umweltmediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "immunologe-immunologin",
+          "name": "Immunologe/Immunologin",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Wissenschaft & Forschung",
+      "description": "",
+      "items": [
+        {
+          "id": "mikrobiologe-mikrobiologin",
+          "name": "Mikrobiologe/Mikrobiologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "molekularbiologe-biologin",
+          "name": "Molekularbiologe/-biologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "neurowissenschaftler-in",
+          "name": "Neurowissenschaftler:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "immunologe-immunologin-forschung",
+          "name": "Immunologe/Immunologin (Forschung)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "epidemiologe-epidemiologin",
+          "name": "Epidemiologe/Epidemiologin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "pharmakolog-in",
+          "name": "Pharmakolog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "biomedizinische-r-wissenschaftler-in",
+          "name": "Biomedizinische:r Wissenschaftler:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "labormediziner-in",
+          "name": "Labormediziner:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Coaching & Prävention",
+      "description": "",
+      "items": [
+        {
+          "id": "gesundheitscoach-zertifiziert",
+          "name": "Gesundheitscoach (zertifiziert)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "stressmanagement-trainer-in",
+          "name": "Stressmanagement-Trainer:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "burnout-pravention-coach",
+          "name": "Burnout-Prävention Coach",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "resilienztrainer-in",
+          "name": "Resilienztrainer:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "entspannungspadagoge-padagogin",
+          "name": "Entspannungspädagoge/-pädagogin",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "meditationslehrer-in-ausgebildet",
+          "name": "Meditationslehrer:in (ausgebildet)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "yogatherapeut-in-yoga-lehrer-in-600h",
+          "name": "Yogatherapeut:in / Yoga-Lehrer:in (600h+)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "mbsr-lehrer-in",
+          "name": "MBSR-Lehrer:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "korperpsychotherapeut-in",
+          "name": "Körperpsychotherapeut:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Soziale Arbeit & Pädagogik",
+      "description": "",
+      "items": [
+        {
+          "id": "sozialarbeiter-in-sozialpadagog-in",
+          "name": "Sozialarbeiter:in / Sozialpädagog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "suchtberater-in",
+          "name": "Suchtberater:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "essstorungs-therapeut-in",
+          "name": "Essstörungs-Therapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "familientherapeut-in-systemische-r-therapeut-in",
+          "name": "Familientherapeut:in / Systemische:r Therapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "schulpsycholog-in",
+          "name": "Schulpsycholog:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ergotherapeut-in",
+          "name": "Ergotherapeut:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Pharmazie & Apotheke",
+      "description": "",
+      "items": [
+        {
+          "id": "apotheker-in",
+          "name": "Apotheker:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "pharmazeutisch-technische-assistenz-pta",
+          "name": "Pharmazeutisch-technische Assistenz (PTA)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "pharmazeutisch-kaufmannische-assistenz-pka",
+          "name": "Pharmazeutisch-kaufmännische Assistenz (PKA)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "klinische-r-pharmazeut-in",
+          "name": "Klinische:r Pharmazeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ernahrungspharmakolog-in",
+          "name": "Ernährungspharmakolog:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Funktionelle & Integrative Medizin",
+      "description": "",
+      "items": [
+        {
+          "id": "functional-medicine-practitioner-ifm",
+          "name": "Functional Medicine Practitioner (IFM)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "orthomolekulare-r-mediziner-in-therapeut-in",
+          "name": "Orthomolekulare:r Mediziner:in / Therapeut:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "anti-aging-mediziner-in",
+          "name": "Anti-Aging-Mediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "prazisionsmedizin-spezialist-in",
+          "name": "Präzisionsmedizin-Spezialist:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "longevity-mediziner-in",
+          "name": "Longevity-Mediziner:in",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "mikrobiomdiagnostik-spezialist-in",
+          "name": "Mikrobiomdiagnostik-Spezialist:in",
+          "description": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category": "Fachverbände & Titel",
+      "description": "",
+      "items": [
+        {
+          "id": "zusatzbezeichnung-ernahrungsmedizin-bdem",
+          "name": "Zusatzbezeichnung Ernährungsmedizin (BDEM)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "zusatzbezeichnung-naturheilkunde",
+          "name": "Zusatzbezeichnung Naturheilkunde",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "zusatzbezeichnung-psychotherapie-arztlich",
+          "name": "Zusatzbezeichnung Psychotherapie (ärztlich)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "daem-mitglied",
+          "name": "DAEM-Mitglied",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "dgem-mitglied",
+          "name": "DGEM-Mitglied",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "dgnm-mitglied-neurogastroenterologie",
+          "name": "DGNM-Mitglied (Neurogastroenterologie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ddg-mitglied-diabetologie",
+          "name": "DDG-Mitglied (Diabetologie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "dgppn-mitglied-psychiatrie",
+          "name": "DGPPN-Mitglied (Psychiatrie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "bvdn-mitglied-neurologie",
+          "name": "BVDN-Mitglied (Neurologie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "apt-mitglied-psychotherapie",
+          "name": "APT-Mitglied (Psychotherapie)",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "ifm-certified-practitioner",
+          "name": "IFM Certified Practitioner",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "quetheb-mitglied",
+          "name": "QUETHEB-Mitglied",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "vdd-mitglied",
+          "name": "VDD-Mitglied",
+          "description": "",
+          "tags": []
+        },
+        {
+          "id": "bdh-mitglied-heilpraktiker",
+          "name": "BDH-Mitglied (Heilpraktiker)",
+          "description": "",
+          "tags": []
+        }
+      ]
+    }
+  ]
+}
