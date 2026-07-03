@@ -29,7 +29,6 @@ final class NutriMinds_Doctor_Verification {
 
     private array $translations = [];
     private ?string $current_language = null;
-    private bool $language_switcher_inserted = false;
 
     public function __construct() {
         add_action('init', [$this, 'capture_language_choice']);
@@ -49,7 +48,6 @@ final class NutriMinds_Doctor_Verification {
         add_action('add_meta_boxes', [$this, 'register_application_meta_boxes']);
         add_filter('manage_' . self::POST_TYPE . '_posts_columns', [$this, 'filter_application_columns']);
         add_action('manage_' . self::POST_TYPE . '_posts_custom_column', [$this, 'render_application_column'], 10, 2);
-        add_filter('render_block', [$this, 'append_language_switcher_to_navigation'], 10, 2);
     }
 
     public function capture_language_choice(): void {
@@ -623,21 +621,6 @@ final class NutriMinds_Doctor_Verification {
         }
     }
 
-    public function append_language_switcher_to_navigation(string $block_content, array $block): string {
-        if ($this->language_switcher_inserted || ($block['blockName'] ?? '') !== 'core/navigation') {
-            return $block_content;
-        }
-
-        $this->language_switcher_inserted = true;
-
-        return preg_replace(
-            '/<\/nav>$/',
-            $this->render_language_switcher() . '</nav>',
-            $block_content,
-            1
-        ) ?: $block_content;
-    }
-
     public function t(string $key): string {
         $translations = $this->get_translations($this->get_current_language());
 
@@ -681,7 +664,10 @@ final class NutriMinds_Doctor_Verification {
             );
         }
 
-        return '<div class="nm-language-switcher" aria-label="Language switcher">' . $items . '</div>';
+        return '<div class="nm-language-switcher-group">'
+            . '<div class="nm-language-switcher" aria-label="Language switcher">' . $items . '</div>'
+            . '<p class="nm-language-switcher__hint">' . esc_html($this->t('form.languageHint')) . '</p>'
+            . '</div>';
     }
 
     private function get_language_url(string $language): string {

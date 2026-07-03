@@ -30,11 +30,35 @@ textarea {
     box-sizing: border-box;
 }
 
+.nm-registration__header-actions {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.nm-language-switcher-group {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .nm-language-switcher {
     align-items: center;
     display: inline-flex;
     gap: 6px;
-    margin-left: 18px;
+}
+
+.nm-language-switcher__hint {
+    color: var(--nm-muted);
+    font-size: 12px;
+    line-height: 1.35;
+    margin: 0;
+    max-width: 240px;
+    text-align: right;
 }
 
 .nm-language-switcher__link {
@@ -593,8 +617,12 @@ textarea {
         flex-direction: column;
     }
 
-    .nm-language-switcher {
-        margin: 12px 0 0;
+    .nm-registration__header-actions {
+        margin-top: 12px;
+    }
+
+    .nm-language-switcher__hint {
+        max-width: 160px;
     }
 
     .nm-registration__header h1 {

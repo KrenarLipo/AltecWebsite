@@ -16,8 +16,11 @@ if (!defined('ABSPATH')) {
                 <h1><?php echo esc_html($this->t('form.title')); ?></h1>
                 <p><?php echo esc_html($this->t('form.intro')); ?></p>
             </div>
-            <div class="nm-registration__counter" aria-live="polite">
-                <?php echo esc_html($this->t('form.step')); ?> <span data-nm-current-step>1</span> <?php echo esc_html($this->t('form.stepOf')); ?> 4
+            <div class="nm-registration__header-actions">
+                <div class="nm-registration__counter" aria-live="polite">
+                    <?php echo esc_html($this->t('form.step')); ?> <span data-nm-current-step>1</span> <?php echo esc_html($this->t('form.stepOf')); ?> 4
+                </div>
+                <?php echo $this->render_language_switcher(); ?>
             </div>
         </header>
 
