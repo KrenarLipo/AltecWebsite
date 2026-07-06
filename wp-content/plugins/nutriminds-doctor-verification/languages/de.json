@@ -36,6 +36,8 @@
   "button.back": "Zurück",
   "button.continue": "Weiter",
   "button.submit": "Bewerbung absenden",
+  "button.openRegistration": "Als Spezialist registrieren",
+  "button.closeRegistration": "Schließen",
   "js.selected": "Ausgewählt",
   "js.select": "Auswählen",
   "js.primary": "Primär",

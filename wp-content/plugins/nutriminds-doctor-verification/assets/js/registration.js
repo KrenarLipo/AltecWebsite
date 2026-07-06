@@ -549,7 +549,48 @@
         showStep(1);
     }
 
+    function initRegistrationModal(modal) {
+        const trigger = document.querySelector('[data-nm-registration-trigger]');
+        const closeElements = Array.from(modal.querySelectorAll('[data-nm-registration-close]'));
+        let lastFocusedElement = null;
+
+        function onKeydown(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        }
+
+        function openModal() {
+            lastFocusedElement = document.activeElement;
+            modal.hidden = false;
+            document.body.classList.add('nm-registration-modal-open');
+            const closeButton = modal.querySelector('.nm-registration-modal__close');
+            if (closeButton) {
+                closeButton.focus();
+            }
+            document.addEventListener('keydown', onKeydown);
+        }
+
+        function closeModal() {
+            modal.hidden = true;
+            document.body.classList.remove('nm-registration-modal-open');
+            document.removeEventListener('keydown', onKeydown);
+            if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                lastFocusedElement.focus();
+            }
+        }
+
+        if (trigger) {
+            trigger.addEventListener('click', openModal);
+        }
+
+        closeElements.forEach((element) => {
+            element.addEventListener('click', closeModal);
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('[data-nm-registration]').forEach(initRegistration);
+        document.querySelectorAll('[data-nm-registration-modal]').forEach(initRegistrationModal);
     });
 })();

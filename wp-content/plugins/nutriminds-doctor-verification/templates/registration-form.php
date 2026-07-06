@@ -8,12 +8,21 @@ if (!defined('ABSPATH')) {
 <?php echo wp_json_encode($nutriminds_registration_config ?? []); ?>
 </script>
 
-<section class="nm-registration" data-nm-registration>
+<button type="button" class="nm-button nm-registration-trigger" data-nm-registration-trigger>
+    <?php echo esc_html($this->t('button.openRegistration')); ?>
+</button>
+
+<div class="nm-registration-modal" data-nm-registration-modal hidden>
+    <div class="nm-registration-modal__backdrop" data-nm-registration-close></div>
+    <div class="nm-registration-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="nm-registration-title">
+        <button type="button" class="nm-registration-modal__close" data-nm-registration-close aria-label="<?php echo esc_attr($this->t('button.closeRegistration')); ?>">&times;</button>
+
+        <section class="nm-registration" data-nm-registration>
     <div class="nm-registration__shell">
         <header class="nm-registration__header">
             <div>
                 <img class="nm-registration__logo" src="<?php echo esc_url($this->get_registration_logo_url()); ?>" alt="<?php echo esc_attr($this->t('form.brand')); ?>">
-                <h1><?php echo esc_html($this->t('form.title')); ?></h1>
+                <h1 id="nm-registration-title"><?php echo esc_html($this->t('form.title')); ?></h1>
                 <p><?php echo esc_html($this->t('form.intro')); ?></p>
             </div>
             <div class="nm-registration__header-actions">
@@ -140,4 +149,6 @@ if (!defined('ABSPATH')) {
             </footer>
         </form>
     </div>
-</section>
+        </section>
+    </div>
+</div>

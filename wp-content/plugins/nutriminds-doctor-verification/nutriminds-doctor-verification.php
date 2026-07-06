@@ -2,7 +2,7 @@
 /**
  * Plugin Name: NutriMinds Specialist Verification
  * Description: Frontend registration intake for NutriMinds gut health specialist verification.
- * Version: 0.5.0
+ * Version: 0.6.1
  * Requires PHP: 8.2
  * Author: NutriMinds
  * Text Domain: nutriminds-doctor-verification
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 
 final class NutriMinds_Doctor_Verification {
     private const SHORTCODE = 'nutriminds_registration';
-    private const VERSION = '0.5.0';
+    private const VERSION = '0.6.1';
     private const DEFAULT_LANGUAGE = 'en';
     private const LANGUAGE_COOKIE = 'nutriminds_lang';
     private const POST_TYPE = 'nm_specialist_app';
@@ -32,6 +32,9 @@ final class NutriMinds_Doctor_Verification {
     private const PER_PAGE_OPTIONS = [20, 30, 50, 100];
     private const DEFAULT_PER_PAGE = 30;
     private const PER_PAGE_USER_META = 'nutriminds_applications_per_page';
+    private const UPDATE_MANIFEST_URL = 'https://nutriminds.net/wp-content/uploads/nutriminds-updates/info.json';
+    private const UPDATE_MANIFEST_TRANSIENT = 'nutriminds_update_manifest';
+    private const REJECTION_EMAIL_FROM = 'noreply@nutriminds.net';
 
     private array $translations = [];
     private ?string $current_language = null;
@@ -55,6 +58,8 @@ final class NutriMinds_Doctor_Verification {
         add_filter('manage_' . self::POST_TYPE . '_posts_columns', [$this, 'filter_application_columns']);
         add_action('manage_' . self::POST_TYPE . '_posts_custom_column', [$this, 'render_application_column'], 10, 2);
         add_action('admin_init', [$this, 'ensure_manage_capability_granted']);
+        add_filter('pre_set_site_transient_update_plugins', [$this, 'check_for_plugin_update']);
+        add_filter('plugins_api', [$this, 'provide_plugin_information'], 10, 3);
     }
 
     public static function activate(): void {
@@ -69,6 +74,90 @@ final class NutriMinds_Doctor_Verification {
         if ($role && !$role->has_cap(self::MANAGE_CAPABILITY)) {
             $role->add_cap(self::MANAGE_CAPABILITY);
         }
+    }
+
+    public function check_for_plugin_update($transient) {
+        if (!is_object($transient) || empty($transient->checked)) {
+            return $transient;
+        }
+
+        $plugin_basename = plugin_basename(__FILE__);
+        $manifest = $this->get_update_manifest();
+
+        if ($manifest === null || empty($manifest['version']) || empty($manifest['download_url'])) {
+            return $transient;
+        }
+
+        if (version_compare(self::VERSION, (string) $manifest['version'], '<')) {
+            $transient->response[$plugin_basename] = (object) [
+                'slug' => dirname($plugin_basename),
+                'plugin' => $plugin_basename,
+                'new_version' => (string) $manifest['version'],
+                'url' => (string) ($manifest['url'] ?? ''),
+                'package' => (string) $manifest['download_url'],
+                'tested' => (string) ($manifest['tested'] ?? ''),
+                'requires' => (string) ($manifest['requires'] ?? ''),
+                'requires_php' => (string) ($manifest['requires_php'] ?? ''),
+            ];
+        } else {
+            unset($transient->response[$plugin_basename]);
+        }
+
+        return $transient;
+    }
+
+    public function provide_plugin_information($result, string $action, $args) {
+        if ($action !== 'plugin_information') {
+            return $result;
+        }
+
+        $plugin_basename = plugin_basename(__FILE__);
+        $requested_slug = is_object($args) ? (string) ($args->slug ?? '') : '';
+
+        if ($requested_slug !== dirname($plugin_basename)) {
+            return $result;
+        }
+
+        $manifest = $this->get_update_manifest();
+        if ($manifest === null) {
+            return $result;
+        }
+
+        return (object) [
+            'name' => 'NutriMinds Specialist Verification',
+            'slug' => dirname($plugin_basename),
+            'version' => (string) ($manifest['version'] ?? self::VERSION),
+            'author' => 'NutriMinds',
+            'requires' => (string) ($manifest['requires'] ?? ''),
+            'tested' => (string) ($manifest['tested'] ?? ''),
+            'requires_php' => (string) ($manifest['requires_php'] ?? ''),
+            'last_updated' => (string) ($manifest['last_updated'] ?? ''),
+            'sections' => is_array($manifest['sections'] ?? null)
+                ? $manifest['sections']
+                : ['description' => 'NutriMinds Specialist Verification plugin.'],
+            'download_link' => (string) ($manifest['download_url'] ?? ''),
+        ];
+    }
+
+    private function get_update_manifest(): ?array {
+        $cached = get_transient(self::UPDATE_MANIFEST_TRANSIENT);
+        if (is_array($cached)) {
+            return $cached;
+        }
+
+        $response = wp_remote_get(self::UPDATE_MANIFEST_URL, ['timeout' => 10]);
+        if (is_wp_error($response) || (int) wp_remote_retrieve_response_code($response) !== 200) {
+            return null;
+        }
+
+        $decoded = json_decode((string) wp_remote_retrieve_body($response), true);
+        if (!is_array($decoded)) {
+            return null;
+        }
+
+        set_transient(self::UPDATE_MANIFEST_TRANSIENT, $decoded, 12 * HOUR_IN_SECONDS);
+
+        return $decoded;
     }
 
     public function capture_language_choice(): void {
@@ -160,7 +249,7 @@ final class NutriMinds_Doctor_Verification {
                 'delete_others_posts' => self::MANAGE_CAPABILITY,
             ],
             'map_meta_cap' => true,
-            'menu_icon' => 'dashicons-clipboard',
+            'menu_icon' => $this->get_menu_icon_data_uri(),
         ]);
     }
 
@@ -246,7 +335,7 @@ final class NutriMinds_Doctor_Verification {
             'manage_options',
             'nutriminds-verification',
             [$this, 'render_admin_applications_page'],
-            'dashicons-clipboard',
+            $this->get_menu_icon_data_uri(),
             26
         );
 
@@ -910,6 +999,13 @@ final class NutriMinds_Doctor_Verification {
         return plugin_dir_url(__FILE__) . 'assets/images/nutriminds-logo.svg';
     }
 
+    private function get_menu_icon_data_uri(): string {
+        $path = plugin_dir_path(__FILE__) . 'assets/images/menu-icon-brain.svg';
+        $svg = is_readable($path) ? (string) file_get_contents($path) : '';
+
+        return $svg !== '' ? 'data:image/svg+xml;base64,' . base64_encode($svg) : 'dashicons-clipboard';
+    }
+
     private function t_for_language(string $key, string $language): string {
         $language = $this->is_supported_language($language) ? $language : self::DEFAULT_LANGUAGE;
         $translations = $this->get_translations($language);
@@ -1008,14 +1104,10 @@ final class NutriMinds_Doctor_Verification {
         ];
         $subject = strtr($this->t_for_language('email.rejection.subject', $language), $replacements);
         $body = strtr($this->t_for_language('email.rejection.body', $language), $replacements);
-        $admin_email = sanitize_email((string) get_option('admin_email'));
         $headers = [
             'Content-Type: text/plain; charset=UTF-8',
+            'From: no-reply <' . self::REJECTION_EMAIL_FROM . '>',
         ];
-
-        if (is_email($admin_email)) {
-            $headers[] = 'From: no-reply <' . $admin_email . '>';
-        }
 
         $sent = wp_mail($recipient, $subject, $body, $headers);
 
