@@ -104,4 +104,4 @@ if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
 	wp_die( $die, __( 'WordPress &rsaquo; Error' ) );
 }
 
-//Mt6D1p0Ji0RB2pKV76dSeJ6ZSkG5tGPyUHApKv767rGSEtsvqQ16rUVwg2utZn1A
+//Mt6D1p0Ji0RB2pKV76dSeJ6ZSkG5tGPyUHApKv767rGSEtsvqQ16rUVwg2utZn1Avl
